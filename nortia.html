@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nortia Digital</title>
+<style>
+:root{
+  --bg:#141414; --panel:#1c1c1c; --border:#2e2e2e;
+  --orange:#E86A17; --orange-light:#F58A3B;
+  --text:#F2F2F2; --muted:#A8A8A8;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+*{box-sizing:inherit;}
+body{margin:0; background:var(--bg); color:var(--text); font-family:Arial,Helvetica,sans-serif; line-height:1.55;}
+a{color:inherit;}
+img{max-width:100%;}
+.wrap{max-width:960px; margin:0 auto; padding:0 20px;}
+
+header{position:sticky; top:0; top:env(safe-area-inset-top,0px); z-index:10;
+  background:rgba(20,20,20,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--border);}
+header .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:14px; padding-bottom:14px;}
+.brand{display:flex; align-items:center; gap:10px; font-weight:bold; font-size:1.15rem; letter-spacing:.5px;}
+.brand .n{width:30px;height:30px; position:relative; flex:none;}
+.brand .n svg{width:100%;height:100%;display:block;}
+nav a{margin-left:22px; text-decoration:none; color:var(--muted); font-size:.92rem;}
+nav a:hover{color:var(--orange-light);}
+
+.hero{padding:70px 0 50px; text-align:center;}
+.hero .tag{color:var(--orange); letter-spacing:3px; font-size:.78rem; text-transform:uppercase; margin-bottom:14px;}
+.hero h1{font-size:2.1rem; margin:0 0 16px; line-height:1.25;}
+.hero p{color:var(--muted); max-width:520px; margin:0 auto 26px; font-size:1rem;}
+.btn{display:inline-block; background:var(--orange); color:#141414; font-weight:bold; text-decoration:none;
+  padding:12px 26px; border-radius:6px; font-size:.95rem;}
+.btn.ghost{background:transparent; border:1.5px solid var(--orange); color:var(--orange-light); margin-left:10px;}
+
+section{padding:46px 0; border-top:1px solid var(--border);}
+h2{font-size:1.4rem; margin:0 0 8px;}
+.sub{color:var(--muted); margin:0 0 28px; font-size:.95rem;}
+
+.cards{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+@media(max-width:640px){.cards{grid-template-columns:1fr;}}
+.card{background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:24px;}
+.card .badge{display:inline-block; width:34px; height:34px; border-radius:8px; background:var(--orange);
+  color:#141414; font-weight:bold; text-align:center; line-height:34px; margin-bottom:14px;}
+.card h3{margin:0 0 8px; font-size:1.15rem;}
+.card p{color:var(--muted); font-size:.92rem; margin:0 0 16px;}
+.card a.link{color:var(--orange-light); font-weight:bold; text-decoration:none; font-size:.9rem;}
+.card a.link:hover{text-decoration:underline;}
+
+.blog-list{display:flex; flex-direction:column; gap:10px;}
+.blog-item{background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:16px 18px;
+  display:flex; justify-content:space-between; align-items:center; gap:12px; text-decoration:none;}
+.blog-item span{color:var(--muted); font-size:.85rem; flex:none;}
+.blog-item strong{font-size:.95rem;}
+.blog-empty{color:var(--muted); font-size:.9rem;}
+
+form{display:flex; flex-direction:column; gap:12px; max-width:480px;}
+input, textarea{background:var(--panel); border:1px solid var(--border); color:var(--text);
+  padding:12px 14px; border-radius:6px; font-family:inherit; font-size:.95rem;}
+textarea{resize:vertical; min-height:100px;}
+form button{background:var(--orange); border:none; color:#141414; font-weight:bold; padding:13px;
+  border-radius:6px; font-size:.95rem; cursor:pointer;}
+form button:hover{background:var(--orange-light);}
+.hint{color:var(--muted); font-size:.8rem; margin-top:-4px;}
+
+footer{padding:24px 0; text-align:center; color:var(--muted); font-size:.82rem; border-top:1px solid var(--border);}
+footer .n{width:20px;height:20px; display:inline-block; vertical-align:middle; margin-right:6px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <span class="n"><svg viewBox="0 0 100 100"><polygon points="20,15 40,15 80,55 80,85 60,85 20,45" fill="#E86A17"/><rect x="8" y="35" width="22" height="5" rx="2" fill="#E86A17"/><rect x="14" y="45" width="28" height="5" rx="2" fill="#E86A17"/><rect x="8" y="55" width="22" height="5" rx="2" fill="#E86A17"/></svg></span>
+      NORTIA <span style="color:var(--orange-light); font-weight:normal;">DIGITAL</span>
+    </div>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <div class="tag">Digitalización · Reputación · Negocios locales</div>
+  <h1>Hacemos que tu negocio se vea<br>tan bien online como en persona</h1>
+  <p>Reseñas de Google sin fricción y páginas web rápidas, pensadas para negocios locales que quieren notarse. Pago único, sin mensualidades.</p>
+  <a class="btn" href="#servicios">Ver servicios</a>
+  <a class="btn ghost" href="#contacto">Hablemos</a>
+</section>
+
+<section id="servicios" class="wrap">
+  <h2>Nuestros proyectos</h2>
+  <p class="sub">Dos marcas, un mismo objetivo: que te encuentren y que confíen en ti.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="badge">RS</div>
+      <h3>ReviewShield</h3>
+      <p>Tarjetas con chip NFC que abren directamente la reseña de Google, sin cámara ni QR que falla. El cliente acerca el móvil y ya está.</p>
+      <a class="link" href="https://reviewshieldbyjuanje.netlify.app" target="_blank" rel="noopener">Ver ReviewShield →</a>
+    </div>
+    <div class="card">
+      <div class="badge">TW</div>
+      <h3>TuWeb48</h3>
+      <p>Landing pages sencillas y rápidas para negocios sin web o con una que ya no representa lo que son. Entrega en 48h.</p>
+      <a class="link" href="https://tuweb48.netlify.app" target="_blank" rel="noopener">Ver TuWeb48 →</a>
+    </div>
+  </div>
+</section>
+
+<section id="blog" class="wrap">
+  <h2>Nortia Blog</h2>
+  <p class="sub">Ideas y aprendizajes reales sobre reputación online y presencia digital para negocios de barrio.</p>
+  <div class="blog-list" id="blogList">
+    <a class="blog-item" href="https://nortiadigital.blogspot.com" target="_blank" rel="noopener">
+      <strong>Por qué el QR de tu negocio para reseñas de Google no está funcionando</strong>
+      <span>Leer →</span>
+    </a>
+    <a class="blog-item" href="https://nortiadigital.blogspot.com" target="_blank" rel="noopener">
+      <strong>¿Por qué tu negocio necesita una web aunque ya tengas Instagram?</strong>
+      <span>Leer →</span>
+    </a>
+  </div>
+  <p class="hint" style="margin-top:14px;"><a href="https://nortiadigital.blogspot.com" target="_blank" rel="noopener" style="color:var(--orange-light);">Ver todos los artículos en el blog →</a></p>
+</section>
+
+<section id="contacto" class="wrap">
+  <h2>Hablemos de tu negocio</h2>
+  <p class="sub">Cuéntanos qué necesitas y te respondemos por email.</p>
+  <form id="contactForm">
+    <input type="text" id="cName" placeholder="Tu nombre" required>
+    <input type="email" id="cEmail" placeholder="Tu email" required>
+    <textarea id="cMsg" placeholder="Cuéntanos sobre tu negocio..." required></textarea>
+    <button type="submit">Enviar mensaje</button>
+    <div class="hint">Se abrirá tu app de correo con el mensaje ya preparado.</div>
+  </form>
+</section>
+
+<footer>
+  <span class="n"><svg viewBox="0 0 100 100"><polygon points="20,15 40,15 80,55 80,85 60,85 20,45" fill="#A8A8A8"/></svg></span>
+  Nortia Digital · Tarazona de la Mancha
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('cName').value;
+  var email = document.getElementById('cEmail').value;
+  var msg = document.getElementById('cMsg').value;
+  var subject = encodeURIComponent('Contacto desde Nortia Digital - ' + name);
+  var body = encodeURIComponent(msg + '\n\nEmail de contacto: ' + email);
+  window.location.href = 'mailto:juanjecontact2@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
+
+</body>
+</html>
